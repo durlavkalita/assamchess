@@ -1,34 +1,8 @@
 import { FaBars } from "react-icons/fa";
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import logo from "../assets/aaca_logo.jpg";
-
-const navigation = [
-  {
-    name: "Blog",
-    link: "/blog",
-  },
-  {
-    name: "Register",
-    link: "/register",
-  },
-  {
-    name: "Players",
-    link: "/players",
-  },
-  {
-    name: "Events",
-    link: "/events",
-  },
-  {
-    name: "AACA",
-    link: "/aaca",
-  },
-  {
-    name: "Contact",
-    link: "/contact",
-  },
-];
+import logo from "/assets/aaca_logo.jpg";
+import { navigation_list } from "../data";
 
 export default function Navbar() {
   const [showMenu, setShowMenu] = useState(false);
@@ -52,7 +26,7 @@ export default function Navbar() {
         </a>
         {/* main menu */}
         <div id="mainMenu" className="hidden lg:flex space-x-8 mr-8">
-          {navigation.map((item) => (
+          {navigation_list.map((item) => (
             <Link
               key={item.link}
               to={item.link}
@@ -72,7 +46,7 @@ export default function Navbar() {
               showMenu ? "" : "hidden"
             }`}
           >
-            {navigation.map((item) => (
+            {navigation_list.map((item) => (
               <Link
                 key={item.link}
                 to={item.link}

@@ -1,5 +1,5 @@
 import React from "react";
-import tournament from "../../assets/latest_1.jpg";
+import tournament from "/assets/latest_1.jpg";
 
 export default function FeaturedTournament() {
   return (

@@ -7,6 +7,7 @@ export default function Contact() {
         <div className="relative bg-white shadow-xl">
           <h2 className="sr-only">Contact us</h2>
           <div className="grid grid-cols-1 lg:grid-cols-3">
+            {/* contact details */}
             <div className="relative overflow-hidden py-10 px-6 bg-indigo-700 sm:px-10 xl:p-12">
               <div
                 className="absolute inset-0 pointer-events-none sm:hidden"
@@ -245,14 +246,19 @@ export default function Contact() {
                 </li>
               </ul>
             </div>
+            {/* form */}
             <div className="py-10 px-6 sm:px-10 lg:col-span-2 xl:p-12">
               <h3 className="text-lg font-medium text-gray-900">
                 Send us a message
               </h3>
-              <form className="mt-6 grid grid-cols-1 gap-y-6 sm:grid-cols-2 sm:gap-x-8">
+              <form
+                action="https://formsubmit.co/ed2dbf8e787df34bc7d31396190c5c92"
+                method="POST"
+                className="mt-6 grid grid-cols-1 gap-y-6 sm:grid-cols-2 sm:gap-x-8"
+              >
                 <div>
                   <label className="block text-sm font-medium text-gray-900">
-                    First name
+                    First name <span className="text-red-500">*</span>
                   </label>
                   <div className="mt-1">
                     <input
@@ -260,12 +266,13 @@ export default function Contact() {
                       name="first_name"
                       id="first_name"
                       className="py-3 px-4 block w-full shadow-sm text-gray-900 focus:ring-indigo-500 focus:border-indigo-500 border-gray-300 rounded-md"
+                      required
                     />
                   </div>
                 </div>
                 <div>
                   <label className="block text-sm font-medium text-gray-900">
-                    Last name
+                    Last name <span className="text-red-500">*</span>
                   </label>
                   <div className="mt-1">
                     <input
@@ -273,12 +280,13 @@ export default function Contact() {
                       name="last_name"
                       id="last_name"
                       className="py-3 px-4 block w-full shadow-sm text-gray-900 focus:ring-indigo-500 focus:border-indigo-500 border-gray-300 rounded-md"
+                      required
                     />
                   </div>
                 </div>
                 <div>
                   <label className="block text-sm font-medium text-gray-900">
-                    Email
+                    Email <span className="text-red-500">*</span>
                   </label>
                   <div className="mt-1">
                     <input
@@ -286,6 +294,7 @@ export default function Contact() {
                       name="email"
                       type="email"
                       className="py-3 px-4 block w-full shadow-sm text-gray-900 focus:ring-indigo-500 focus:border-indigo-500 border-gray-300 rounded-md"
+                      required
                     />
                   </div>
                 </div>
@@ -308,7 +317,7 @@ export default function Contact() {
                     />
                   </div>
                 </div>
-                <div className="sm:col-span-2">
+                {/* <div className="sm:col-span-2">
                   <label className="block text-sm font-medium text-gray-900">
                     Subject
                   </label>
@@ -320,11 +329,11 @@ export default function Contact() {
                       className="py-3 px-4 block w-full shadow-sm text-gray-900 focus:ring-indigo-500 focus:border-indigo-500 border-gray-300 rounded-md"
                     />
                   </div>
-                </div>
+                </div> */}
                 <div className="sm:col-span-2">
                   <div className="flex justify-between">
                     <label className="block text-sm font-medium text-gray-900">
-                      Message
+                      Message <span className="text-red-500">*</span>
                     </label>
                     <span id="message-max" className="text-sm text-gray-500">
                       Max. 500 characters
@@ -336,6 +345,7 @@ export default function Contact() {
                       name="message"
                       className="py-3 px-4 block w-full shadow-sm text-gray-900 focus:ring-indigo-500 focus:border-indigo-500 border-gray-300 rounded-md"
                       aria-describedby="message-max"
+                      required
                     ></textarea>
                   </div>
                 </div>

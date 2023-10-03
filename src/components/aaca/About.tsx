@@ -1,8 +1,8 @@
 import React from "react";
-import image1 from "../../assets/aaca_1.jpg";
-import image2 from "../../assets/aaca_2.jpg";
-import image3 from "../../assets/aaca_3.jpg";
-import image4 from "../../assets/aaca_4.jpg";
+import image1 from "/assets/aaca_1.jpg";
+import image2 from "/assets/aaca_2.jpg";
+import image3 from "/assets/aaca_3.jpg";
+import image4 from "/assets/aaca_4.jpg";
 
 export default function About() {
   return (

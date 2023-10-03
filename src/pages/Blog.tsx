@@ -1,5 +1,5 @@
 import React from "react";
-import logo from "../assets/aaca_logo.jpg";
+import logo from "/assets/aaca_logo.jpg";
 import { Link } from "react-router-dom";
 
 const posts = [

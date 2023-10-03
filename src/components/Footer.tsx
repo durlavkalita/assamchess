@@ -1,35 +1,5 @@
 import { Link } from "react-router-dom";
-
-const navigation = [
-  {
-    name: "Home",
-    link: "/",
-  },
-  {
-    name: "Blog",
-    link: "/blog",
-  },
-  {
-    name: "Register",
-    link: "/register",
-  },
-  {
-    name: "Players",
-    link: "/players",
-  },
-  {
-    name: "Events",
-    link: "/events",
-  },
-  {
-    name: "AACA",
-    link: "/aaca",
-  },
-  {
-    name: "Contact",
-    link: "/contact",
-  },
-];
+import { navigation_list } from "../data";
 
 export default function Footer() {
   return (
@@ -39,7 +9,7 @@ export default function Footer() {
           className="-mx-5 -my-2 flex flex-wrap justify-center"
           aria-label="Footer"
         >
-          {navigation.map((item) => (
+          {navigation_list.map((item) => (
             <Link
               key={item.link}
               to={item.link}
