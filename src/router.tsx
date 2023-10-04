@@ -16,7 +16,7 @@ const Router = () => {
       <Routes>
         <Route path="/" Component={Home}></Route>
         <Route path="/blog" Component={Blog}></Route>
-        <Route path="/blog/:id" Component={Post}></Route>
+        <Route path="/blog/:slug" Component={Post}></Route>
         <Route path="/events" Component={Events}></Route>
         <Route path="/events/:id" Component={Event}></Route>
         <Route path="/aaca" Component={AACA}></Route>

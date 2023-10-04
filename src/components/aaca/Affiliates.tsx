@@ -24,7 +24,11 @@ export default function Affiliates() {
                   <h3 className="text-gray-900 text-sm font-medium truncate">
                     {item.name}
                   </h3>
-                  <span className="flex-shrink-0 inline-block px-2 py-0.5 text-green-800 text-xs font-medium bg-green-100 rounded-full">
+                  <span
+                    className={`flex-shrink-0 inline-block px-2 py-0.5 text-green-800 text-xs font-medium rounded-full ${
+                      item.type == "club" ? "bg-green-300" : "bg-green-100"
+                    }`}
+                  >
                     {item.type}
                   </span>
                 </div>

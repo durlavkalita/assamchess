@@ -1,6 +1,13 @@
 import React from "react";
+import { events_list } from "../data";
+import { useParams } from "react-router-dom";
 
 export default function Event() {
+  const params = useParams();
+  const filtered_event = events_list.filter(
+    (item) => item.id == String(params.id)
+  );
+  const event = filtered_event[0];
   return (
     <div className="bg-gray-100">
       <div className="max-w-7xl mx-auto sm:px-6 lg:px-8">
@@ -9,7 +16,7 @@ export default function Event() {
             Event Information
           </h3>
           <p className="mt-1 max-w-2xl text-sm leading-6 text-gray-500">
-            Contact details and structure.
+            Event details and structure.
           </p>
         </div>
         <div className="mt-6 border-t border-gray-100">
@@ -19,7 +26,15 @@ export default function Event() {
                 Event name
               </dt>
               <dd className="mt-1 text-sm leading-6 text-gray-700 sm:col-span-2 sm:mt-0">
-                event.name
+                {event.name}
+              </dd>
+            </div>
+            <div className="px-4 py-4 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-0">
+              <dt className="text-sm font-medium leading-6 text-gray-900">
+                Event Type
+              </dt>
+              <dd className="mt-1 text-sm leading-6 text-gray-700 sm:col-span-2 sm:mt-0">
+                {event.type}
               </dd>
             </div>
             <div className="px-4 py-4 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-0">
@@ -27,7 +42,9 @@ export default function Event() {
                 Event Dates
               </dt>
               <dd className="mt-1 text-sm leading-6 text-gray-700 sm:col-span-2 sm:mt-0">
-                Margot Foster
+                <span className="text-blue-700">{event.start}</span>
+                <span className="px-2">-</span>
+                <span className="text-red-500">{event.end}</span>
               </dd>
             </div>
             <div className="px-4 py-4 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-0">
@@ -35,7 +52,7 @@ export default function Event() {
                 Event Venue
               </dt>
               <dd className="mt-1 text-sm leading-6 text-gray-700 sm:col-span-2 sm:mt-0">
-                Margot Foster
+                {event.venue}
               </dd>
             </div>
             <div className="px-4 py-4 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-0">
@@ -43,20 +60,9 @@ export default function Event() {
                 Event Organizer
               </dt>
               <dd className="mt-1 text-sm leading-6 text-gray-700 sm:col-span-2 sm:mt-0">
-                Margot Foster
-              </dd>
-            </div>
-
-            <div className="px-4 py-6 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-0">
-              <dt className="text-sm font-medium leading-6 text-gray-900">
-                About
-              </dt>
-              <dd className="mt-1 text-sm leading-6 text-gray-700 sm:col-span-2 sm:mt-0">
-                Fugiat ipsum ipsum deserunt culpa aute sint do nostrud anim
-                incididunt cillum culpa consequat. Excepteur qui ipsum aliquip
-                consequat sint. Sit id mollit nulla mollit nostrud in ea officia
-                proident. Irure nostrud pariatur mollit ad adipisicing
-                reprehenderit deserunt qui eu.
+                {event.organizer
+                  ? event.organizer
+                  : "All Assam Chess Association"}
               </dd>
             </div>
             {/* <div className="px-4 py-6 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-0">

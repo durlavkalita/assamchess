@@ -1,17 +1,12 @@
 import React from "react";
-
-const post = {
-  id: "001",
-  title: "Looking for article writter",
-  excerpt:
-    "All Asssam Chess Association(AACA) is looking for chess people interested in writing about chess news in Assam.",
-  content:
-    "All Asssam Chess Association(AACA) is looking for chess people interested in writing about chess news in Assam.",
-  date: "26-09-2023",
-  image: null,
-};
+import { posts_list } from "../data";
+import { useLocation } from "react-router-dom";
 
 export default function Post() {
+  const { state } = useLocation();
+  const filtered_post = posts_list.filter((item) => item.id == state.id);
+  const post = filtered_post[0];
+
   return (
     <div className="relative py-16 bg-white overflow-hidden">
       <div className="hidden lg:block lg:absolute lg:inset-y-0 lg:h-full lg:w-full">

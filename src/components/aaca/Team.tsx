@@ -1,20 +1,6 @@
 import React from "react";
 import dp from "/assets/dp.png";
-
-const team = [
-  {
-    name: "Kandarpa Kalita",
-    role: "President",
-    social: null,
-    image: "/dp.png",
-  },
-  {
-    name: "Rajib Dhar",
-    role: "General Secretary",
-    social: null,
-    image: "/dp.png",
-  },
-];
+import { team_list } from "../../data";
 
 export default function Team() {
   return (
@@ -29,12 +15,12 @@ export default function Team() {
           </p>
         </div>
         <ul className="mx-auto space-y-16 sm:grid sm:grid-cols-2 sm:gap-16 sm:space-y-0 lg:grid-cols-3 lg:max-w-5xl">
-          {team.map((member) => (
+          {team_list.map((member) => (
             <li key={member.name}>
               <div className="space-y-6">
                 <img
                   className="mx-auto h-40 w-40 rounded-full xl:w-56 xl:h-56"
-                  src={dp}
+                  src={member.image ? member.image : dp}
                   alt={member.name}
                 />
                 <div className="space-y-2">
