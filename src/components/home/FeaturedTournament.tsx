@@ -1,4 +1,3 @@
-import React from "react";
 import tournament from "/assets/featured_tournament.jpeg";
 
 export default function FeaturedTournament() {

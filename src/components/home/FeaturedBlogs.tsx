@@ -1,4 +1,3 @@
-import React from "react";
 import logo from "/assets/aaca_logo.jpg";
 import { Link } from "react-router-dom";
 import { posts_list } from "../../data";

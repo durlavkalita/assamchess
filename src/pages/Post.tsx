@@ -1,4 +1,3 @@
-import React from "react";
 import { posts_list } from "../data";
 import { useLocation } from "react-router-dom";
 

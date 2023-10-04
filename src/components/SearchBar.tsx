@@ -1,5 +1,3 @@
-import React from "react";
-
 export default function SearchBar() {
   const handleDistrictChange = (e: { target: { value: string } }) => {
     const district = e.target.value;

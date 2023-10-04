@@ -1,4 +1,3 @@
-import React from "react";
 import dp from "/assets/dp.png";
 import { team_list } from "../../data";
 

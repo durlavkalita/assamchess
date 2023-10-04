@@ -1,4 +1,3 @@
-import React from "react";
 import About from "../components/aaca/About";
 import Team from "../components/aaca/Team";
 import Affiliates from "../components/aaca/Affiliates";

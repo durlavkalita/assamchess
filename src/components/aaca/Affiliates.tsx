@@ -1,4 +1,3 @@
-import React from "react";
 import { affiliates_list } from "../../data";
 
 export default function Affiliates() {

@@ -1,4 +1,3 @@
-import React from "react";
 import { events_list } from "../data";
 import { useParams } from "react-router-dom";
 
